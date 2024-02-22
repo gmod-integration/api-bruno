@@ -1,0 +1,15 @@
+meta {
+  name: unBan
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{api_url}}/user/unBan
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{api_server_token}}
+}

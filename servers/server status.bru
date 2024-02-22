@@ -1,0 +1,29 @@
+meta {
+  name: server status
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api_url}}/{{api_version}}/servers/{{api_server_id}}/status
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{api_server_token}}
+}
+
+body:json {
+  {
+    "gamemode": "darkrp",
+    "maxplayers": 24,
+    "players": 8,
+    "map": "gm_abstraction_ex-sunset",
+    "port": 27025,
+    "ip": "92.159.83.140:27025",
+    "hostname": "[FR] Linventif - Dev - Main 2",
+    "start": true
+  }
+  
+}

@@ -1,0 +1,15 @@
+meta {
+  name: ban
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{api_url}}/user/ban
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{api_server_token}}
+}

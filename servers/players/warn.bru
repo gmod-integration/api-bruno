@@ -1,0 +1,15 @@
+meta {
+  name: warn
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{api_url}}/user/warn
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{api_server_token}}
+}

@@ -1,0 +1,21 @@
+meta {
+  name: check player bans
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{api_url}}/{{api_version}}/bans?IP=%
+  body: none
+  auth: bearer
+}
+
+query {
+  IP: %
+  ~discordID: 1114239573879435326
+  ~steamID64: 76561198000000000
+}
+
+auth:bearer {
+  token: {{api_server_token}}
+}

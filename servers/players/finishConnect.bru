@@ -1,0 +1,20 @@
+meta {
+  name: finishConnect
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{api_url}}/user/finishConnect
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{api_server_token}}
+}
+
+body:form-urlencoded {
+  steam: 76561198219049673
+  name: Linventif
+}

@@ -1,0 +1,26 @@
+meta {
+  name: disconnect
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{api_url}}/user/disconnect
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{api_server_token}}
+}
+
+body:form-urlencoded {
+  deaths: 10
+  steam: 76561198219049673
+  money: 105355
+  kills: 0
+  rank: superadmin
+  time: 80
+  name: Linventif
+  customValues: {extend: "a", 
+}

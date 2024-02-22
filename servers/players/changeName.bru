@@ -1,0 +1,15 @@
+meta {
+  name: changeName
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{api_url}}/user/changeName
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{api_server_token}}
+}

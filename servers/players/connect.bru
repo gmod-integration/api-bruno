@@ -1,0 +1,25 @@
+meta {
+  name: connect
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{api_url}}/user/connect
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{api_server_token}}
+}
+
+body:form-urlencoded {
+  address: 92.159.83.140:27005
+  bot: 0
+  index: 0
+  steam: 76561198219049673
+  networkid: STEAM_0:1:129391972
+  name: Linventif
+  userid: 3
+}

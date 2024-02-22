@@ -1,0 +1,15 @@
+meta {
+  name: kick
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{api_url}}/user/kick
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{api_server_token}}
+}

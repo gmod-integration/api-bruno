@@ -1,0 +1,23 @@
+meta {
+  name: say
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{api_url}}/user/say
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{api_server_token}}
+}
+
+body:json {
+  {
+      "steamID64": "{{user_steamID64}}",
+      "message": "Hello World",
+      "name": "{{user_name}}"
+  }
+}

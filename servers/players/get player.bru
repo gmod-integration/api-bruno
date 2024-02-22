@@ -1,0 +1,15 @@
+meta {
+  name: get player
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{api_url}}/{{api_version}}/servers/:serverID/players/:steamID64
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{api_server_token}}
+}

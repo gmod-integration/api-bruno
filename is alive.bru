@@ -1,0 +1,15 @@
+meta {
+  name: is alive
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{api_url}}/{{api_version}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{api_server_token}}
+}
