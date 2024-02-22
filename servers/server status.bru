@@ -5,13 +5,13 @@ meta {
 }
 
 post {
-  url: {{api_url}}/{{api_version}}/servers/{{api_server_id}}/status
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/status
   body: json
   auth: bearer
 }
 
 auth:bearer {
-  token: {{api_server_token}}
+  token: {{serverToken}}
 }
 
 body:json {

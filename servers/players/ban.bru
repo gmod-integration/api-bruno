@@ -5,11 +5,11 @@ meta {
 }
 
 post {
-  url: {{api_url}}/user/ban
+  url: {{baseURL}}/user/ban
   body: none
   auth: bearer
 }
 
 auth:bearer {
-  token: {{api_server_token}}
+  token: {{serverToken}}
 }

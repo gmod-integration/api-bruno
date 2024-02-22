@@ -5,11 +5,11 @@ meta {
 }
 
 post {
-  url: {{api_url}}/user/warn
+  url: {{baseURL}}/user/warn
   body: none
   auth: bearer
 }
 
 auth:bearer {
-  token: {{api_server_token}}
+  token: {{serverToken}}
 }

@@ -5,17 +5,17 @@ meta {
 }
 
 get {
-  url: {{api_url}}/{{api_version}}/bans?IP=%
+  url: {{baseURL}}/{{apiVersion}}/bans
   body: none
   auth: bearer
 }
 
 query {
-  IP: %
+  ~IP: %
   ~discordID: 1114239573879435326
   ~steamID64: 76561198000000000
 }
 
 auth:bearer {
-  token: {{api_server_token}}
+  token: {{serverToken}}
 }

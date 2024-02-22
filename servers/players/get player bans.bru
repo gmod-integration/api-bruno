@@ -5,11 +5,11 @@ meta {
 }
 
 get {
-  url: {{api_url}}/{{api_version}}/servers/:serverID/players/:steamID64/bans
+  url: {{baseURL}}/{{apiVersion}}/servers/:serverID/players/:steamID64/bans
   body: none
   auth: bearer
 }
 
 auth:bearer {
-  token: {{api_server_token}}
+  token: {{serverToken}}
 }

@@ -5,11 +5,11 @@ meta {
 }
 
 post {
-  url: {{api_url}}/user/changeName
+  url: {{baseURL}}/user/changeName
   body: none
   auth: bearer
 }
 
 auth:bearer {
-  token: {{api_server_token}}
+  token: {{serverToken}}
 }

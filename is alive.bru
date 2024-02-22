@@ -5,11 +5,11 @@ meta {
 }
 
 get {
-  url: {{api_url}}/{{api_version}}
+  url: {{baseURL}}/{{apiVersion}}
   body: none
   auth: bearer
 }
 
 auth:bearer {
-  token: {{api_server_token}}
+  token: {{serverToken}}
 }

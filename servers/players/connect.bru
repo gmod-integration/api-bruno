@@ -5,13 +5,13 @@ meta {
 }
 
 post {
-  url: {{api_url}}/user/connect
+  url: {{baseURL}}/user/connect
   body: formUrlEncoded
   auth: bearer
 }
 
 auth:bearer {
-  token: {{api_server_token}}
+  token: {{serverToken}}
 }
 
 body:form-urlencoded {
