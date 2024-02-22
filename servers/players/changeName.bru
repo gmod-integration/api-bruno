@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{baseURL}}/user/changeName
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/changeName
   body: none
   auth: bearer
 }

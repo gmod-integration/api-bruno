@@ -1,11 +1,11 @@
 meta {
-  name: disconnect
+  name: update server status
   type: http
-  seq: 12
+  seq: 2
 }
 
 post {
-  url: {{baseURL}}/{{apiVersion}}/user/disconnect
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/status
   body: json
   auth: bearer
 }
@@ -15,5 +15,5 @@ auth:bearer {
 }
 
 body:json {
-  {{player}}
+  {{server}}
 }

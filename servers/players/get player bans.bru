@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseURL}}/{{apiVersion}}/servers/:serverID/players/:steamID64/bans
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/servers/{{serverID}}/players/{{steamID64}}/bans
   body: none
   auth: bearer
 }

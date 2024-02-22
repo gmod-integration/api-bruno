@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{baseURL}}/user/kick
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/kick
   body: json
   auth: bearer
 }

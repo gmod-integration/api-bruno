@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{baseURL}}/user/say
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/say
   body: json
   auth: bearer
 }
@@ -16,8 +16,8 @@ auth:bearer {
 
 body:json {
   {
-      "steamID64": "{{steamID64}}",
-      "message": "Hello World",
-      "name": "{{user_name}}"
+      "player": {{player}},
+      "text": "Hello World",
+      "team": false
   }
 }

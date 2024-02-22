@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{baseURL}}/user/unBan
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/unBan
   body: none
   auth: bearer
 }

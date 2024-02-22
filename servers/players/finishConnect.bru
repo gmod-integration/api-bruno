@@ -5,8 +5,8 @@ meta {
 }
 
 post {
-  url: {{baseURL}}/user/finishConnect
-  body: formUrlEncoded
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/finish-connect
+  body: json
   auth: bearer
 }
 
@@ -14,7 +14,6 @@ auth:bearer {
   token: {{serverToken}}
 }
 
-body:form-urlencoded {
-  steam: 76561198219049673
-  name: Linventif
+body:json {
+  {{player}}
 }
