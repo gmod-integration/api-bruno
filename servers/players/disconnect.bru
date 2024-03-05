@@ -1,11 +1,11 @@
 meta {
   name: disconnect
   type: http
-  seq: 12
+  seq: 5
 }
 
 post {
-  url: {{baseURL}}/{{apiVersion}}/user/disconnect
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/disconnect
   body: json
   auth: bearer
 }

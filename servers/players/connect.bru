@@ -1,17 +1,26 @@
 meta {
   name: connect
   type: http
-  seq: 9
+  seq: 4
 }
 
 post {
   url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/connect
-  body: formUrlEncoded
+  body: json
   auth: bearer
 }
 
 auth:bearer {
   token: {{serverToken}}
+}
+
+body:json {
+  {
+    "address": "127.0.0.1",
+    "name": "Linventif",
+    "networkid": "STEAM",
+    "steamID64": "0121"
+  }
 }
 
 body:form-urlencoded {

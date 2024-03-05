@@ -1,11 +1,11 @@
 meta {
-  name: finishConnect
+  name: ready
   type: http
-  seq: 10
+  seq: 6
 }
 
 post {
-  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/finish-connect
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/ready
   body: json
   auth: bearer
 }

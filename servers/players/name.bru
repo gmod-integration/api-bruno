@@ -1,0 +1,23 @@
+meta {
+  name: name
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/name
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{serverToken}}
+}
+
+body:json {
+  {
+    "player": {{player}},
+    "oldName": "Victor",
+    "newName": "Bernard"
+  }
+}

@@ -1,11 +1,11 @@
 meta {
-  name: server info
+  name: player
   type: http
   seq: 1
 }
 
 get {
-  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}
   body: none
   auth: bearer
 }

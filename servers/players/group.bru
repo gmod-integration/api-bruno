@@ -1,0 +1,23 @@
+meta {
+  name: group
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/group
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{serverToken}}
+}
+
+body:json {
+  {
+      "oldGroup": "user superadmin",
+      "newGroup": "superadmin"
+  }
+  
+}
