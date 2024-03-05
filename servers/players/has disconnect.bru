@@ -1,5 +1,5 @@
 meta {
-  name: disconnect
+  name: has disconnect
   type: http
   seq: 5
 }
@@ -15,5 +15,8 @@ auth:bearer {
 }
 
 body:json {
-  {{player}}
+  {
+    "player": {{player}},
+    "reason": "idk"
+  }
 }

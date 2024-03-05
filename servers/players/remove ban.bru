@@ -1,0 +1,15 @@
+meta {
+  name: remove ban
+  type: http
+  seq: 11
+}
+
+delete {
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/ban
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{serverToken}}
+}

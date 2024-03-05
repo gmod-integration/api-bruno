@@ -1,0 +1,28 @@
+meta {
+  name: add ban
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/ban
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{serverToken}}
+}
+
+body:json {
+  {
+    "name": "a player",
+    "steamid": {{steamID}},
+    "steamID64": {{steamID64}},
+    "id": 4,
+    "ip": {{IP}},
+    "duration": 0,
+    "by": "admin name",
+    "kicked": true
+  }
+}

@@ -1,5 +1,5 @@
 meta {
-  name: connect
+  name: has connect
   type: http
   seq: 4
 }
@@ -16,10 +16,13 @@ auth:bearer {
 
 body:json {
   {
-    "address": "127.0.0.1",
-    "name": "Linventif",
-    "networkid": "STEAM",
-    "steamID64": "0121"
+    "bot": 0,
+    "networkid": {{steamID}},
+    "steamID64": {{steamID64}},
+    "name": "steam name",
+    "userid": 4,
+    "index": 4,
+    "address": {{IP}}
   }
 }
 

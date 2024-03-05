@@ -1,0 +1,19 @@
+meta {
+  name: is ready
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/ready
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{serverToken}}
+}
+
+body:json {
+  {{player}}
+}

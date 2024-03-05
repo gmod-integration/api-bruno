@@ -6,10 +6,26 @@ meta {
 
 post {
   url: {{baseURL}}/{{apiVersion}}/
-  body: none
+  body: json
   auth: bearer
 }
 
 auth:bearer {
   token: {{serverToken}}
+}
+
+body:json {
+  {
+    "player": {{player}},
+    "screenshot": "base64image",
+    "captureData": {
+      "format": "jpeg",
+      "x": 0,
+      "y": 0,
+      "w": 1080,
+      "h": 1920,
+      "quality": 95
+    },
+    "size": "8KB"
+  }
 }

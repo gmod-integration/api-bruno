@@ -1,11 +1,11 @@
 meta {
-  name: ready
+  name: has spawn
   type: http
   seq: 6
 }
 
 post {
-  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/ready
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/spawn
   body: json
   auth: bearer
 }

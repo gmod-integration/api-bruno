@@ -1,7 +1,7 @@
 meta {
-  name: group
+  name: update group
   type: http
-  seq: 3
+  seq: 2
 }
 
 post {
@@ -16,7 +16,8 @@ auth:bearer {
 
 body:json {
   {
-      "oldGroup": "user superadmin",
+      "player": {{player}},
+      "oldGroup": "user",
       "newGroup": "superadmin"
   }
   

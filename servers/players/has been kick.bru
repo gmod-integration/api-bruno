@@ -1,0 +1,23 @@
+meta {
+  name: has been kick
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/kick
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{serverToken}}
+}
+
+body:json {
+  {
+      "player": {{player}},
+      "text": "Hello World",
+      "teamOnly": false
+  }
+}
