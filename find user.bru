@@ -5,12 +5,12 @@ meta {
 }
 
 get {
-  url: {{baseURL}}/{{apiVersion}}/users?steamID64={{steamID64}}
+  url: {{baseURL}}/{{apiVersion}}/users?discordID={{discordID}}
   body: none
   auth: none
 }
 
 query {
-  steamID64: {{steamID64}}
-  ~discordID: {{discordID}}
+  discordID: {{discordID}}
+  ~steamID64: {{steamID64}}
 }
