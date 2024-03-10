@@ -1,0 +1,27 @@
+meta {
+  name: report error
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/clients/{{steamID64}}/servers/{{serverID}}/errors
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{playerToken}}
+}
+
+body:json {
+  {
+    "error": "addons/gmod_integration/[...]/sh_errors.lua:26: '=' expected near '<eof>'",
+    "realm": "realm",
+    "stack": "/",
+    "name": "gmod_integration",
+    "id": "0123456789",
+    "uptime": 50,
+    "identifier": "{{steamID64}}"
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: generate public token
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/public-token
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{serverToken}}
+}
