@@ -1,18 +1,18 @@
 vars {
-  baseURL: http://localhost:53136
+  baseURL: {{process.env.BASE_URL}}
   apiVersion: v3
-  serverID: Q9SuZQRFmR
-  steamID64: 76561198200175111
-  discordID: 840565480271642644
+  serverID: {{process.env.SERVER_ID}}
+  steamID64: {{process.env.STEAM_ID64}}
+  discordID: {{process.env.DISCORD_ID}}
   server: { "hostname": "New Gmod Server", "ip": "127.0.0.1", "port": 27015, "map": "gm_construct", "players": 16, "maxPlayers": 32, "gameMode": "sandbox", "uptime": 900 }
   angle: { "p": 0, "y": 90, "r": 0 }
   team: { "id": 1, "name": "Red Team" }
   position: { "x": 100, "y": 200, "z": 300 }
   customValues: { "money": 1000, "level": 10 }
-  player: { "steamID": "STEAM_0:1:119954691", "steamID64": "76561198200175111", "userGroup": "user", "team": { "id": 1, "name": "Red Team"}, "name": "Player Name", "kills": 10, "deaths": 0, "customValues": { "money": 1000, "level": 10 }, "connectTime": 120, "ping": 50, "position": { "x": 100, "y": 200, "z": 300 }, "angle": { "p": 0, "y": 90, "r": 0 } }
+  player: { "steamID": "{{process.env.STEAM_ID}}", "steamID64": "{{process.env.STEAM_ID64}}", "userGroup": "user", "team": { "id": 1, "name": "Red Team"}, "name": "Player Name", "kills": 10, "deaths": 0, "customValues": { "money": 1000, "level": 10 }, "connectTime": 120, "ping": 50, "position": { "x": 100, "y": 200, "z": 300 }, "angle": { "p": 0, "y": 90, "r": 0 } }
   serverToken: {{process.env.SERVER_TOKEN}}
   IP: 127.0.0.1
-  channelID: 1110105786597785680
-  steamID: STEAM_0:1:119954691
+  channelID: {{process.env.CHANNEL_ID}}
+  steamID: {{process.env.STEAM_ID}}
   playerToken: {{process.env.PLAYER_TOKEN}}
 }
