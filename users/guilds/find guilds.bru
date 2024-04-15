@@ -1,0 +1,15 @@
+meta {
+  name: find guilds
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
