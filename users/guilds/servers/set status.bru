@@ -4,7 +4,7 @@ meta {
   seq: 1
 }
 
-get {
+patch {
   url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers/{{serverID}}/status
   body: json
   auth: bearer
