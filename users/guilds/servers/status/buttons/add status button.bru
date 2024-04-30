@@ -1,0 +1,21 @@
+meta {
+  name: add status button
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers/{{serverID}}/status/buttons
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+  {
+    "channelID": {{channelID}}
+  }
+}

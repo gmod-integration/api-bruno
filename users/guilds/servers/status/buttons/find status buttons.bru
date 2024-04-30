@@ -1,0 +1,21 @@
+meta {
+  name: find status buttons
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers/{{serverID}}/status/buttons
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+  {
+    "channelID": {{channelID}}
+  }
+}

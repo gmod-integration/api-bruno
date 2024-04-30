@@ -1,0 +1,21 @@
+meta {
+  name: remove status button
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers/{{serverID}}/status/buttons/{{statusButtonsID}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+  {
+    "channelID": {{channelID}}
+  }
+}
