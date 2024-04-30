@@ -1,10 +1,10 @@
 meta {
-  name: set status
+  name: find status
   type: http
   seq: 1
 }
 
-patch {
+get {
   url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers/{{serverID}}/status
   body: json
   auth: bearer

@@ -1,0 +1,21 @@
+meta {
+  name: add status
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers/{{serverID}}/status
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+  {
+    "channelID": {{channelID}}
+  }
+}
