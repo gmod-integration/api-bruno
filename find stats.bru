@@ -1,0 +1,15 @@
+meta {
+  name: find stats
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseURL}}/{{apiVersion}}/stats
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{serverToken}}
+}
