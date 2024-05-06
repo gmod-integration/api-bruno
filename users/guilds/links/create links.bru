@@ -1,0 +1,15 @@
+meta {
+  name: create links
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/links
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
