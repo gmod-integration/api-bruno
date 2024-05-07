@@ -1,0 +1,15 @@
+meta {
+  name: delete servers
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers/{{serverID}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}

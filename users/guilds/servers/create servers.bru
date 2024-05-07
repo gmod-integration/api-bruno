@@ -1,0 +1,15 @@
+meta {
+  name: create servers
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
