@@ -1,0 +1,15 @@
+meta {
+  name: reset server token
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers/{{serverID}}/token
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
