@@ -1,0 +1,23 @@
+meta {
+  name: edit roles
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/verifications/roles/{{roleID}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+  {
+    "url": "https://example.com",
+    "alias": "example",
+    "active": true
+  }
+}
