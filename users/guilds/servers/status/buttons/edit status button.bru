@@ -1,15 +1,24 @@
 meta {
-  name: remove status button
+  name: edit status button
   type: http
-  seq: 3
+  seq: 4
 }
 
-delete {
+put {
   url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers/{{serverID}}/status/buttons/{{statusButtonsID}}
-  body: none
+  body: json
   auth: bearer
 }
 
 auth:bearer {
   token: {{userToken}}
+}
+
+body:json {
+  {
+    "emoji": "",
+    "enable": true,
+    "url": "https://example.com",
+    "name": "Example"
+  }
 }

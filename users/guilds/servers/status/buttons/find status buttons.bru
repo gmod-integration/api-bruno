@@ -6,16 +6,10 @@ meta {
 
 get {
   url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers/{{serverID}}/status/buttons
-  body: json
+  body: none
   auth: bearer
 }
 
 auth:bearer {
   token: {{userToken}}
-}
-
-body:json {
-  {
-    "channelID": {{channelID}}
-  }
 }
