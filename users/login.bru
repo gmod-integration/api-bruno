@@ -1,0 +1,15 @@
+meta {
+  name: login
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseURL}}/{{apiVersion}}/users/login?code={{discordCode}}
+  body: none
+  auth: none
+}
+
+query {
+  code: {{discordCode}}
+}
