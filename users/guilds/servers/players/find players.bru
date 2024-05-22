@@ -1,0 +1,15 @@
+meta {
+  name: find players
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers/{{serverID}}/players
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
