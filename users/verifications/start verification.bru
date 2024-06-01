@@ -1,0 +1,15 @@
+meta {
+  name: start verification
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/verifications/token
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
