@@ -1,0 +1,15 @@
+meta {
+  name: delete specific setting
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/settings/verification_dont_mp
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}

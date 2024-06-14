@@ -1,0 +1,15 @@
+meta {
+  name: find specific setting
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/settings/verification_dont_mp
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
