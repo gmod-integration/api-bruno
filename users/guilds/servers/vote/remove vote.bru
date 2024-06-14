@@ -1,0 +1,15 @@
+meta {
+  name: remove vote
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers/{{serverID}}/votes
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
