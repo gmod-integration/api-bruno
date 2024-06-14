@@ -1,0 +1,15 @@
+meta {
+  name: check member verification
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/verifications/check-members
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}

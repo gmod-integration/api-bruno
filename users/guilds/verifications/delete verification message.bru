@@ -1,0 +1,15 @@
+meta {
+  name: delete verification message
+  type: http
+  seq: 1
+}
+
+delete {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/verifications
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
