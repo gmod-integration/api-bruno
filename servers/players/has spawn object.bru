@@ -1,31 +1,17 @@
 meta {
   name: has spawn object
   type: http
-  seq: 12
+  seq: 8
 }
 
 post {
-  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/disconnect
-
-  if (badArgument([player])) {
-    return res.status(400).json({
-      error: 'missing_arguments',
-      args: {
-        player: !!player,
-      },
-    });
-  }
-
-  const ply = new PlayerGmod(player);
-  if (!ply.isValid()) {
-    return res.status(400).json({ error: 'player_bad_format', arguments: ply.isValidGetInformations() });
-  }
-
-  await logServer(server, 'player_death', { ply });
-  return res.status(200).json({ success: true });
-}{{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/disconnect
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/spawn/:object
   body: json
   auth: bearer
+}
+
+params:path {
+  object: prop
 }
 
 auth:bearer {
@@ -34,7 +20,8 @@ auth:bearer {
 
 body:json {
   {
-    "player": {{player}},
-    "reason": "idk"
+      "player": {{player}},
+      "entity": {{entity}},
+      "model": ""
   }
 }

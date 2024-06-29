@@ -1,0 +1,23 @@
+meta {
+  name: his death
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/death
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{serverToken}}
+}
+
+body:json {
+  {
+      "player": {{player}},
+      "inflictor": "",
+      "attacker": ""
+  }
+}

@@ -1,0 +1,21 @@
+meta {
+  name: his initial spawn
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/initial-spawn
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{serverToken}}
+}
+
+body:json {
+  {
+      "player": {{player}}
+  }
+}

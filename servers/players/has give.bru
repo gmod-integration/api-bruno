@@ -1,0 +1,23 @@
+meta {
+  name: has give
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/give
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{serverToken}}
+}
+
+body:json {
+  {
+      "player": {{player}},
+      "class": "",
+      "swep": ""
+  }
+}
