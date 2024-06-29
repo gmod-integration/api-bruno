@@ -1,11 +1,11 @@
 meta {
-  name: has disconnect
+  name: has disconnectfefe
   type: http
-  seq: 5
+  seq: 12
 }
 
 post {
-  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/disconnect
+  url: {{baseURL}}/{{apiVersion}}/servers/{{serverID}}/players/{{steamID64}}/spawn/model
 
   if (badArgument([player])) {
     return res.status(400).json({

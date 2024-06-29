@@ -1,11 +1,11 @@
 meta {
-  name: find auto roles
+  name: find logs
   type: http
   seq: 1
 }
 
 get {
-  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/auto-roles
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers
   body: none
   auth: bearer
 }
