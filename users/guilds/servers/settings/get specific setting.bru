@@ -1,0 +1,19 @@
+meta {
+  name: get specific setting
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/servers/{{serverID}}/settings/:setting
+  body: none
+  auth: bearer
+}
+
+params:path {
+  setting: sync_role_direction
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
