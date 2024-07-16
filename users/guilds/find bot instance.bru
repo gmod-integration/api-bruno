@@ -1,0 +1,15 @@
+meta {
+  name: find bot instance
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/bot
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
