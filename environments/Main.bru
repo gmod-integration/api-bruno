@@ -9,7 +9,8 @@ vars {
   team: { "id": 1, "name": "Red Team" }
   position: { "x": 100, "y": 200, "z": 300 }
   customValues: { "money": 1000, "level": 10 }
-  player: { "steamID": "{{process.env.STEAM_ID}}", "steamID64": "{{process.env.STEAM_ID64}}", "userGroup": "user", "team": { "id": 1, "name": "Red Team"}, "name": "Player Name", "kills": 10, "deaths": 0, "customValues": { "money": 1000, "level": 10 }, "connectTime": 120, "ping": 50, "position": { "x": 100, "y": 200, "z": 300 }, "angle": { "p": 0, "y": 90, "r": 0 } }
+  player: { "steamID": "{{process.env.STEAM_ID}}", "steamID64": "{{process.env.STEAM_ID64}}", "userGroup": "user", "team": {{team}}, "name": "Player Name", "kills": 10, "deaths": 0, "customValues": {{customValues}}, "connectTime": 120, "ping": 50, "position": {{position}}, "angle": {{angle}} }
+  entity: { "class": "prop_physics", "model": "models/props_c17/oildrum001.mdl", "position": {{position}}, "angle": {{angle}} }
   serverToken: {{process.env.SERVER_TOKEN}}
   IP: 127.0.0.1
   channelID: {{process.env.CHANNEL_ID}}
