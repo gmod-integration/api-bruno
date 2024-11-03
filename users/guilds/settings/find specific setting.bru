@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/settings/verification_dont_mp
+  url: {{baseURL}}/{{apiVersion}}/users/{{discordID}}/guilds/{{guildID}}/settings/:setting
   body: none
   auth: bearer
+}
+
+params:path {
+  setting: verification_dont_mp
 }
 
 auth:bearer {
